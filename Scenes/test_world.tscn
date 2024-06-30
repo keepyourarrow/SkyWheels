@@ -1,0 +1,149 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk7mw5rck5svy"]
+
+[ext_resource type="PackedScene" uid="uid://da3et7e2nlxk" path="res://Scenes/block.tscn" id="1_4uovd"]
+[ext_resource type="PackedScene" uid="uid://dmc5kp0u1tfgy" path="res://Scenes/circle.tscn" id="2_7ff4h"]
+[ext_resource type="PackedScene" uid="uid://dj01jr23p2cyh" path="res://Scenes/cars/sedan_1.tscn" id="2_uy2y4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ay773"]
+friction = 0.0
+bounce = 0.07
+
+[node name="TestWorld" type="Node2D"]
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="Blocks" type="Node" parent="Environment"]
+
+[node name="Block" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(359, 349)
+
+[node name="Block2" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(675, 349)
+
+[node name="Block3" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(992, 349)
+rotation = 3.14159
+
+[node name="Block5" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(1614, 404)
+rotation = -2.78595
+
+[node name="Block6" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(1925, 481)
+rotation = -3.01897
+
+[node name="Block7" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(2119, 501)
+rotation = 3.14159
+
+[node name="Block16" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(1921, 501)
+rotation = 3.14159
+
+[node name="Block17" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(1805, 483)
+scale = Vector2(0.28, -1)
+
+[node name="Block9" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(2627, 496)
+rotation = 3.14159
+
+[node name="Block10" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(2936, 496)
+rotation = 3.14159
+
+[node name="Block13" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(3342, 429)
+rotation = 3.14159
+
+[node name="Block14" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(3750, 494)
+rotation = 3.14159
+
+[node name="Block15" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(4008, 427)
+rotation = 3.14159
+scale = Vector2(0.625987, 5.17489)
+
+[node name="Block11" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(3140, 462)
+rotation = 2.53084
+scale = Vector2(0.407626, 0.99904)
+
+[node name="Block12" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(3547, 462)
+rotation = -2.56807
+scale = Vector2(0.407626, 0.99904)
+
+[node name="Block8" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(2330, 477)
+rotation = 2.76651
+scale = Vector2(0.415, 1)
+
+[node name="Block4" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
+position = Vector2(1310, 349)
+rotation = 3.14159
+
+[node name="Circle" parent="Environment/Blocks" instance=ExtResource("2_7ff4h")]
+position = Vector2(1216, 362)
+scale = Vector2(1.75409, 1.75409)
+
+[node name="Circle2" parent="Environment/Blocks" instance=ExtResource("2_7ff4h")]
+position = Vector2(1262, 342)
+scale = Vector2(1.88, 1.88)
+
+[node name="Circle3" parent="Environment/Blocks" instance=ExtResource("2_7ff4h")]
+position = Vector2(1307, 350)
+scale = Vector2(2.67928, 2.67928)
+
+[node name="Circle4" parent="Environment/Blocks" instance=ExtResource("2_7ff4h")]
+position = Vector2(1339, 333)
+scale = Vector2(1.60221, 1.60221)
+
+[node name="Circle5" parent="Environment/Blocks" instance=ExtResource("2_7ff4h")]
+position = Vector2(1372, 356)
+scale = Vector2(2.38014, 2.38014)
+
+[node name="Circle6" parent="Environment/Blocks" instance=ExtResource("2_7ff4h")]
+position = Vector2(3340, 429)
+scale = Vector2(2.38014, 2.38014)
+
+[node name="Circle9" parent="Environment/Blocks" instance=ExtResource("2_7ff4h")]
+position = Vector2(3266, 438)
+scale = Vector2(1.38797, 1.38797)
+
+[node name="Circle10" parent="Environment/Blocks" instance=ExtResource("2_7ff4h")]
+position = Vector2(3412, 436)
+scale = Vector2(1.38797, 1.38797)
+
+[node name="Circle13" parent="Environment/Blocks" instance=ExtResource("2_7ff4h")]
+position = Vector2(3384, 424)
+scale = Vector2(1.38797, 1.38797)
+
+[node name="Circle14" parent="Environment/Blocks" instance=ExtResource("2_7ff4h")]
+position = Vector2(3294, 421)
+scale = Vector2(1.38797, 1.38797)
+
+[node name="Circle7" parent="Environment/Blocks" instance=ExtResource("2_7ff4h")]
+position = Vector2(1433, 351)
+scale = Vector2(0.923994, 0.923994)
+
+[node name="Circle8" parent="Environment/Blocks" instance=ExtResource("2_7ff4h")]
+position = Vector2(1190, 352)
+scale = Vector2(0.923994, 0.923994)
+
+[node name="Circle11" parent="Environment/Blocks" instance=ExtResource("2_7ff4h")]
+position = Vector2(1413, 340)
+scale = Vector2(0.923994, 0.923994)
+
+[node name="Circle12" parent="Environment/Blocks" instance=ExtResource("2_7ff4h")]
+position = Vector2(1765, 461)
+scale = Vector2(0.923994, 0.923994)
+
+[node name="Sedan-1" parent="." instance=ExtResource("2_uy2y4")]
+position = Vector2(448, 281)
+physics_material_override = SubResource("PhysicsMaterial_ay773")
+
+[node name="Camera2D" type="Camera2D" parent="Sedan-1"]
+position = Vector2(0, -3)
+rotation_smoothing_enabled = true
