@@ -19,9 +19,25 @@ func _process(_delta):
 		if linear_velocity.rotated(rotation) <= MAX_SPEED:
 			if Input.is_action_pressed("ui_right") or Input.is_action_pressed("R1"):
 				apply_central_impulse(forceVec)
+				
+				#Rear Light activation-----------------
+				if linear_velocity.rotated(rotation).x <0:
+					$rearLight.enabled = true
+					$backingLight.visible = false
+				else:
+					$rearLight.enabled = false
+				#--------------------------------------
 		if linear_velocity.rotated(rotation) >= -MAX_SPEED:
 			if Input.is_action_pressed("ui_left") or Input.is_action_pressed("L1"):
 				apply_central_impulse(-forceVec)
+				
+				#Rear Light activation--------------------
+				if linear_velocity.rotated(rotation).x >0:
+					$rearLight.enabled = true
+				else:
+					$rearLight.enabled = false
+					$backingLight.visible = true
+				#-----------------------------------------
 	else:
 		print("in air")
 	
