@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dj01jr23p2cyh"]
+[gd_scene load_steps=7 format=3 uid="uid://dj01jr23p2cyh"]
 
 [ext_resource type="PackedScene" uid="uid://1di16wygtu6i" path="res://Scenes/wheel_1.tscn" id="1_1ovwj"]
 [ext_resource type="Texture2D" uid="uid://nmafs261hduj" path="res://Assets/CarBodies/Sedan-1.png" id="1_g34c1"]
 [ext_resource type="Script" path="res://Scripts/sedan_1.gd" id="1_yi1km"]
+[ext_resource type="Texture2D" uid="uid://dvii00ntb3d7u" path="res://Assets/Misc/RearLight.png" id="4_1j6f2"]
+[ext_resource type="Texture2D" uid="uid://bugtu26u1teyy" path="res://Assets/Misc/BackingLight.png" id="5_qqjd3"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ihkie"]
 friction = 0.07
@@ -27,7 +29,7 @@ collision_layer = 2
 
 [node name="FrontRayCast" type="RayCast2D" parent="PinJoint2D"]
 position = Vector2(52, -9)
-target_position = Vector2(0, 19)
+target_position = Vector2(0, 20)
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="."]
 position = Vector2(29, 8)
@@ -50,3 +52,16 @@ texture = ExtResource("1_g34c1")
 visible = false
 scale = Vector2(3, 3)
 polygon = PackedVector2Array(-5, 4, 12.3333, 4, 15, 1.66667, 15, -1, 14, -2, 7, -2, 3, -6, -7, -6, -10, -3, -14, -3, -15, -2, -15, 1, -12.3333, 3, -10, 4)
+
+[node name="rearLight" type="PointLight2D" parent="."]
+position = Vector2(-43.5, -3)
+scale = Vector2(3, 3)
+enabled = false
+energy = 9.43
+texture = ExtResource("4_1j6f2")
+
+[node name="backingLight" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-43.5, -3)
+scale = Vector2(3, 3)
+texture = ExtResource("5_qqjd3")
