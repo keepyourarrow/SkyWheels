@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://vi3bx4cejx5y"]
+
+[ext_resource type="PackedScene" uid="uid://dj01jr23p2cyh" path="res://Scenes/cars/base_car.tscn" id="1_haldt"]
+
+[node name="Sedan" instance=ExtResource("1_haldt")]
+power = 70
+max_speed = 350
