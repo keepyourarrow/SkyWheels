@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://y4ewqnd08f1u"]
+
+[ext_resource type="Texture2D" uid="uid://dvii00ntb3d7u" path="res://Assets/Misc/RearLight.png" id="1_ygiyd"]
+
+[node name="rearLight" type="PointLight2D"]
+position = Vector2(-43.5, -3)
+scale = Vector2(3, 3)
+enabled = false
+energy = 9.43
+texture = ExtResource("1_ygiyd")

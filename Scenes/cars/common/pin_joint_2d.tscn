@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://t746jsa3ynrh"]
+
+[ext_resource type="PackedScene" uid="uid://1di16wygtu6i" path="res://Scenes/wheel_1.tscn" id="1_1gx0y"]
+
+[node name="PinJoint2D" type="PinJoint2D"]
+node_a = NodePath("..")
+node_b = NodePath("Wheel")
+bias = 0.471
+motor_enabled = true
+
+[node name="Wheel" parent="." instance=ExtResource("1_1gx0y")]
+collision_layer = 2
+
+[node name="RayCast" type="RayCast2D" parent="."]
+position = Vector2(52, -9)
+target_position = Vector2(0, 20)
