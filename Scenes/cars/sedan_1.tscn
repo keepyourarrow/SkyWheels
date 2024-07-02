@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dj01jr23p2cyh"]
+[gd_scene load_steps=10 format=3 uid="uid://dj01jr23p2cyh"]
 
 [ext_resource type="PackedScene" uid="uid://1di16wygtu6i" path="res://Scenes/wheel_1.tscn" id="1_1ovwj"]
 [ext_resource type="Texture2D" uid="uid://nmafs261hduj" path="res://Assets/CarBodies/Sedan-1.png" id="1_g34c1"]
 [ext_resource type="Script" path="res://Scripts/sedan_1.gd" id="1_yi1km"]
 [ext_resource type="Texture2D" uid="uid://dvii00ntb3d7u" path="res://Assets/Misc/RearLight.png" id="4_1j6f2"]
+[ext_resource type="Texture2D" uid="uid://cdc2d6gnmgqf0" path="res://Assets/CarBodies/Hatchback-1.png" id="5_cp2db"]
 [ext_resource type="Texture2D" uid="uid://bugtu26u1teyy" path="res://Assets/Misc/BackingLight.png" id="5_qqjd3"]
+[ext_resource type="Texture2D" uid="uid://bxckfp4ovy0yj" path="res://Assets/CarBodies/PickupTruck-1.png" id="6_f1th0"]
+[ext_resource type="Texture2D" uid="uid://bekdvfnhf4jpu" path="res://Assets/CarBodies/Sport-1.png" id="7_lyutd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ihkie"]
 friction = 0.07
@@ -44,10 +47,6 @@ collision_layer = 2
 position = Vector2(-52, -9)
 target_position = Vector2(0, 19)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(3, 3)
-texture = ExtResource("1_g34c1")
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false
 scale = Vector2(3, 3)
@@ -65,3 +64,27 @@ visible = false
 position = Vector2(-43.5, -3)
 scale = Vector2(3, 3)
 texture = ExtResource("5_qqjd3")
+
+[node name="Carbodies" type="Node2D" parent="."]
+
+[node name="Htchbck1" type="Sprite2D" parent="Carbodies"]
+visible = false
+position = Vector2(0, -6)
+scale = Vector2(3, 3)
+texture = ExtResource("5_cp2db")
+
+[node name="pckup1" type="Sprite2D" parent="Carbodies"]
+visible = false
+position = Vector2(-3, -6)
+scale = Vector2(3, 3)
+texture = ExtResource("6_f1th0")
+
+[node name="sport1" type="Sprite2D" parent="Carbodies"]
+visible = false
+position = Vector2(1, -4)
+scale = Vector2(3, 3)
+texture = ExtResource("7_lyutd")
+
+[node name="sedan1" type="Sprite2D" parent="Carbodies"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_g34c1")
