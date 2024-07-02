@@ -13,7 +13,6 @@ const ROTATION_MODIFIER = 5;
 func _physics_process(_delta):
 	handle_movement()
 	handle_camera_zoom()
-	$Camera2D.zoom = Vector2(4,4)
 
 func handle_camera_zoom():
 	if Input.is_action_pressed("z"):
