@@ -3,7 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://da3et7e2nlxk" path="res://Scenes/block.tscn" id="1_4uovd"]
 [ext_resource type="PackedScene" uid="uid://dmc5kp0u1tfgy" path="res://Scenes/circle.tscn" id="2_7ff4h"]
 [ext_resource type="FontFile" uid="uid://b7niu3em14t4a" path="res://Assets/Fonts/Minecraft.ttf" id="3_06m17"]
-[ext_resource type="Script" path="res://Scripts/player.gd" id="5_fcng1"]
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(328, 287)
+script = ExtResource("5_fcng1")
 
 [node name="TestWorld" type="Node2D"]
 
@@ -54,11 +57,12 @@ position = Vector2(3342, 429)
 rotation = 3.14159
 
 [node name="Block14" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
-position = Vector2(3750, 494)
+position = Vector2(3677, 494)
 rotation = 3.14159
+scale = Vector2(0.526376, -1.0582)
 
 [node name="Block15" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
-position = Vector2(4008, 427)
+position = Vector2(3987, 427)
 rotation = 3.14159
 scale = Vector2(0.625987, 5.17489)
 
@@ -150,9 +154,12 @@ theme_override_fonts/font = ExtResource("3_06m17")
 theme_override_font_sizes/font_size = 30
 text = "Press > or < to drive"
 
-[node name="Player" type="Node2D" parent="."]
-position = Vector2(328, 287)
-script = ExtResource("5_fcng1")
+
+[node name="Sedan-1" parent="." instance=ExtResource("2_uy2y4")]
+position = Vector2(448, 281)
+physics_material_override = SubResource("PhysicsMaterial_ay773")
+
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 rotation_smoothing_enabled = true
+

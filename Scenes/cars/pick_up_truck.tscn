@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0u66p5h4w8qn"]
+
+[gd_scene load_steps=4 format=3 uid="uid://d0u66p5h4w8qn"]
+
 
 [ext_resource type="PackedScene" uid="uid://dj01jr23p2cyh" path="res://Scenes/cars/base_car.tscn" id="1_vg5tb"]
 [ext_resource type="Texture2D" uid="uid://bxckfp4ovy0yj" path="res://Assets/CarBodies/PickupTruck-1.png" id="2_w307l"]
+
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wodch"]
+size = Vector2(68, 20)
 
 [node name="PickUpTruck" instance=ExtResource("1_vg5tb")]
 power = 100
@@ -25,3 +31,11 @@ position = Vector2(-46.5, 0)
 
 [node name="BackingLight" parent="." index="5"]
 position = Vector2(-46.5, 0)
+
+
+[node name="PlayerArea2d2" type="Area2D" parent="." index="7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea2d2" index="0"]
+position = Vector2(2, 12)
+shape = SubResource("RectangleShape2D_wodch")
+
