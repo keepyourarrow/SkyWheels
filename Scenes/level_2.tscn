@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bggadxwqmhi0u"]
+[gd_scene load_steps=6 format=3 uid="uid://bggadxwqmhi0u"]
 
 [ext_resource type="PackedScene" uid="uid://da3et7e2nlxk" path="res://Scenes/block.tscn" id="1_h5182"]
 [ext_resource type="PackedScene" uid="uid://dmc5kp0u1tfgy" path="res://Scenes/circle.tscn" id="2_n8kqd"]
 [ext_resource type="PackedScene" uid="uid://dqrd2b4g0hf5s" path="res://Scenes/movingblock.tscn" id="3_3n47v"]
-[ext_resource type="PackedScene" uid="uid://dj01jr23p2cyh" path="res://Scenes/cars/sedan_1.tscn" id="4_2wi4r"]
+[ext_resource type="PackedScene" uid="uid://dcj8ruieupjxk" path="res://Scenes/player.tscn" id="4_bks2l"]
+[ext_resource type="PackedScene" uid="uid://b3jwxesjo0ato" path="res://Scenes/finish_line.tscn" id="5_sqo70"]
 
 [node name="Level-2" type="Node2D"]
 
@@ -21,7 +22,8 @@ position = Vector2(477, 195)
 position = Vector2(2307, 403)
 
 [node name="Block9" parent="Environment/Blocks" instance=ExtResource("1_h5182")]
-position = Vector2(2793, 317)
+position = Vector2(2754, 317)
+scale = Vector2(0.687653, 1)
 
 [node name="Block3" parent="Environment/Blocks" instance=ExtResource("1_h5182")]
 position = Vector2(830, 230)
@@ -46,7 +48,7 @@ rotation = -3.14159
 scale = Vector2(0.562912, 6.53065)
 
 [node name="Block10" parent="Environment/Blocks" instance=ExtResource("1_h5182")]
-position = Vector2(3037, 229)
+position = Vector2(3081, 229)
 rotation = -3.14159
 scale = Vector2(0.562912, 6.53065)
 
@@ -100,12 +102,17 @@ scale = Vector2(1.93139, 1.93139)
 position = Vector2(2467, 403)
 scale = Vector2(1.53556, 1.53556)
 
+[node name="Circle14" parent="Environment/Blocks" instance=ExtResource("2_n8kqd")]
+position = Vector2(2429, 410)
+scale = Vector2(1.1691, 1.1691)
+
 [node name="Movingblock" parent="Environment" instance=ExtResource("3_3n47v")]
-position = Vector2(53, 403)
+position = Vector2(1879, 577)
 scale = Vector2(6.46406, 1.18994)
-second_position = Vector2(53, 301)
+second_position = Vector2(1879, 406)
 
-[node name="Sedan-1" parent="." instance=ExtResource("4_2wi4r")]
-position = Vector2(160, 144)
+[node name="Player" parent="." instance=ExtResource("4_bks2l")]
+position = Vector2(160, 127)
 
-[node name="Camera2D" type="Camera2D" parent="Sedan-1"]
+[node name="FinishLine" parent="." instance=ExtResource("5_sqo70")]
+position = Vector2(2927, 309)

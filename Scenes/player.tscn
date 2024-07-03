@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcj8ruieupjxk"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_48g3i"]
+
+[node name="Player" type="Node2D"]
+position = Vector2(328, 287)
+script = ExtResource("1_48g3i")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+rotation_smoothing_enabled = true

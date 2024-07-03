@@ -4,10 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://dmc5kp0u1tfgy" path="res://Scenes/circle.tscn" id="2_7ff4h"]
 [ext_resource type="PackedScene" uid="uid://dj01jr23p2cyh" path="res://Scenes/cars/sedan_1.tscn" id="2_uy2y4"]
 [ext_resource type="FontFile" uid="uid://b7niu3em14t4a" path="res://Assets/Fonts/Minecraft.ttf" id="3_06m17"]
+<<<<<<< Updated upstream
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ay773"]
 friction = 0.0
 bounce = 0.07
+=======
+[ext_resource type="PackedScene" uid="uid://dcj8ruieupjxk" path="res://Scenes/player.tscn" id="4_cn6e2"]
+[ext_resource type="PackedScene" uid="uid://b3jwxesjo0ato" path="res://Scenes/finish_line.tscn" id="5_2sgm6"]
+>>>>>>> Stashed changes
 
 [node name="TestWorld" type="Node2D"]
 
@@ -58,11 +63,12 @@ position = Vector2(3342, 429)
 rotation = 3.14159
 
 [node name="Block14" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
-position = Vector2(3750, 494)
+position = Vector2(3677, 494)
 rotation = 3.14159
+scale = Vector2(0.526376, -1.0582)
 
 [node name="Block15" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
-position = Vector2(4008, 427)
+position = Vector2(3987, 427)
 rotation = 3.14159
 scale = Vector2(0.625987, 5.17489)
 
@@ -154,6 +160,7 @@ theme_override_fonts/font = ExtResource("3_06m17")
 theme_override_font_sizes/font_size = 30
 text = "Press > or < to drive"
 
+<<<<<<< Updated upstream
 [node name="Sedan-1" parent="." instance=ExtResource("2_uy2y4")]
 position = Vector2(448, 281)
 physics_material_override = SubResource("PhysicsMaterial_ay773")
@@ -161,3 +168,10 @@ physics_material_override = SubResource("PhysicsMaterial_ay773")
 [node name="Camera2D" type="Camera2D" parent="Sedan-1"]
 position = Vector2(0, -3)
 rotation_smoothing_enabled = true
+=======
+[node name="Player" parent="." instance=ExtResource("4_cn6e2")]
+position = Vector2(352, 254)
+
+[node name="FinishLine" parent="." instance=ExtResource("5_2sgm6")]
+position = Vector2(3824, 485)
+>>>>>>> Stashed changes
