@@ -2,11 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://da3et7e2nlxk" path="res://Scenes/block.tscn" id="1_4uovd"]
 [ext_resource type="PackedScene" uid="uid://dmc5kp0u1tfgy" path="res://Scenes/circle.tscn" id="2_7ff4h"]
-[ext_resource type="PackedScene" uid="uid://dj01jr23p2cyh" path="res://Scenes/cars/sedan_1.tscn" id="2_uy2y4"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ay773"]
-friction = 0.0
-bounce = 0.07
+[ext_resource type="FontFile" uid="uid://b7niu3em14t4a" path="res://Assets/Fonts/Minecraft.ttf" id="3_06m17"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="5_fcng1"]
 
 [node name="TestWorld" type="Node2D"]
 
@@ -140,10 +137,22 @@ scale = Vector2(0.923994, 0.923994)
 position = Vector2(1765, 461)
 scale = Vector2(0.923994, 0.923994)
 
-[node name="Sedan-1" parent="." instance=ExtResource("2_uy2y4")]
-position = Vector2(448, 281)
-physics_material_override = SubResource("PhysicsMaterial_ay773")
+[node name="Bgtxt-1" type="RichTextLabel" parent="Environment"]
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Camera2D" type="Camera2D" parent="Sedan-1"]
-position = Vector2(0, -3)
+[node name="Label" type="Label" parent="Environment"]
+offset_left = 584.0
+offset_top = 193.0
+offset_right = 874.0
+offset_bottom = 224.0
+theme_override_fonts/font = ExtResource("3_06m17")
+theme_override_font_sizes/font_size = 30
+text = "Press > or < to drive"
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(328, 287)
+script = ExtResource("5_fcng1")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
 rotation_smoothing_enabled = true
