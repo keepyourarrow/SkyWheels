@@ -8,25 +8,33 @@ extends CharacterBody2D
 
 var init_position
 var speed
-var distance_reached
+var moving_up = true
 var timer_started = false
 
 func _ready():
 	init_position = global_position
 	speed = move_speed
-	print(init_position)
 
 func _process(_delta):
-	velocity = move_direction * speed
-	move_and_slide()
+	if moving_up:
+		velocity = move_direction * speed
+		if position.y <= second_position.y and not timer_started:
+				speed = 0
+				timer.start(wait_time)
+				timer_started = true
+	else:
+		velocity = -move_direction * speed
+		if position.y >= init_position.y and not timer_started:
+			speed = 0
+			timer.start(wait_time)
+			timer_started = true
 	
-	if position <= second_position and not timer_started or position >= init_position and not timer_started:
-		speed = 0
-		timer.start(wait_time)
-		timer_started = true
+	move_and_slide()
 
 func _on_wait_timer_timeout():
-	init_position = global_position
-	speed = -move_speed
-	print(init_position)
+	if moving_up:
+		moving_up = false
+	else:
+		moving_up = true
+	speed = move_speed
 	timer_started = false
