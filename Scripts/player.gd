@@ -3,6 +3,8 @@ extends Node2D
 
 @onready var camera = $Camera2D
 
+@onready var car_container: Node2D = $CarContainer
+
 var cars: Array[Car] = []
 var car_scene_paths = []
 var current_car_index = 0
@@ -25,7 +27,10 @@ func create_and_add_cars():
 		car_scene_paths.append(car_scene.resource_path)
 
 func add_first_car():
-	add_child(cars[0])
+	# remove editor only car (maybe there are better solutions
+	car_container.remove_child($CarContainer/TempCar)
+	
+	car_container.add_child(cars[0])
 	cars[0].show_car()
 
 func _physics_process(_delta):
@@ -58,11 +63,11 @@ func switch_car(index):
 		return
 	
 	global_position = cars[current_car_index].global_position 
-	remove_child(cars[current_car_index])
+	car_container.remove_child(cars[current_car_index])
 	# reinstantiate the scene so the position is refreshed
 	cars[current_car_index] = load(car_scene_paths[current_car_index]).instantiate()
 	current_car_index = index
-	add_child(cars[current_car_index])
+	car_container.add_child(cars[current_car_index])
 	cars[current_car_index].global_position = global_position
 	
 	

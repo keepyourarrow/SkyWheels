@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dj01jr23p2cyh"]
+[gd_scene load_steps=8 format=3 uid="uid://dj01jr23p2cyh"]
 
 [ext_resource type="Texture2D" uid="uid://nmafs261hduj" path="res://Assets/CarBodies/Sedan-1.png" id="1_g34c1"]
 [ext_resource type="Script" path="res://Scripts/car.gd" id="1_qodfy"]
@@ -9,6 +9,9 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ihkie"]
 friction = 0.07
 bounce = 0.12
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fw8db"]
+size = Vector2(68, 20)
 
 [node name="BaseCar" type="RigidBody2D"]
 collision_layer = 2
@@ -42,3 +45,9 @@ visible = false
 position = Vector2(-43.5, -3)
 scale = Vector2(3, 3)
 texture = ExtResource("5_qqjd3")
+
+[node name="PlayerArea2d" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea2d"]
+position = Vector2(3, 8)
+shape = SubResource("RectangleShape2D_fw8db")

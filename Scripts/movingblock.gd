@@ -17,7 +17,7 @@ func _ready():
 	print(init_position)
 
 func _process(_delta):
-	velocity = move_direction*speed
+	velocity = move_direction * speed
 	move_and_slide()
 	
 	if position <= second_position and not timer_started or position >= init_position and not timer_started:
@@ -26,7 +26,7 @@ func _process(_delta):
 		timer_started = true
 
 func _on_wait_timer_timeout():
-		init_position = global_position
-		speed = -move_speed
-		print(init_position)
-		timer_started = false
+	init_position = global_position
+	speed = -move_speed
+	print(init_position)
+	timer_started = false
