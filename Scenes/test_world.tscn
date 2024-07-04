@@ -54,11 +54,12 @@ position = Vector2(3342, 429)
 rotation = 3.14159
 
 [node name="Block14" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
-position = Vector2(3750, 494)
+position = Vector2(3677, 494)
 rotation = 3.14159
+scale = Vector2(0.526376, -1.0582)
 
 [node name="Block15" parent="Environment/Blocks" instance=ExtResource("1_4uovd")]
-position = Vector2(4008, 427)
+position = Vector2(3987, 427)
 rotation = 3.14159
 scale = Vector2(0.625987, 5.17489)
 
