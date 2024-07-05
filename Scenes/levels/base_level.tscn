@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://tkrt1s1ogggb"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_rcq8s"]
+[ext_resource type="PackedScene" uid="uid://vi3bx4cejx5y" path="res://Scenes/cars/sedan.tscn" id="2_j5kv1"]
+
+[node name="BaseLevel" type="Node2D"]
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(328, 287)
+script = ExtResource("1_rcq8s")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+rotation_smoothing_enabled = true
+
+[node name="CarContainer" type="Node2D" parent="Player"]
+
+[node name="TempCar" parent="Player/CarContainer" instance=ExtResource("2_j5kv1")]
+position = Vector2(-328, -287)
