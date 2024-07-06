@@ -1,0 +1,199 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd2nffewwd5l3"]
+
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_18dxs"]
+[ext_resource type="Texture2D" uid="uid://j0nmsrwuqfen" path="res://Assets/Objects/whiteCirc.png" id="2_pkny4"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_18dxs")
+
+[node name="Clouds" type="Node" parent="."]
+
+[node name="cloud1" type="Node2D" parent="Clouds"]
+position = Vector2(255, 135)
+metadata/_edit_group_ = true
+
+[node name="c" type="Sprite2D" parent="Clouds/cloud1"]
+position = Vector2(-40, -8)
+scale = Vector2(0.181, 0.181)
+texture = ExtResource("2_pkny4")
+
+[node name="c2" type="Sprite2D" parent="Clouds/cloud1"]
+position = Vector2(13.875, 35.875)
+scale = Vector2(0.2445, 0.2445)
+texture = ExtResource("2_pkny4")
+
+[node name="c3" type="Sprite2D" parent="Clouds/cloud1"]
+position = Vector2(-74, 17)
+scale = Vector2(0.16425, 0.16425)
+texture = ExtResource("2_pkny4")
+
+[node name="c4" type="Sprite2D" parent="Clouds/cloud1"]
+position = Vector2(-49, 37)
+scale = Vector2(0.16425, 0.16425)
+texture = ExtResource("2_pkny4")
+
+[node name="c5" type="Sprite2D" parent="Clouds/cloud1"]
+position = Vector2(76, 22)
+scale = Vector2(0.16425, 0.16425)
+texture = ExtResource("2_pkny4")
+
+[node name="c6" type="Sprite2D" parent="Clouds/cloud1"]
+position = Vector2(117, 31)
+scale = Vector2(0.104125, 0.104125)
+texture = ExtResource("2_pkny4")
+
+[node name="c7" type="Sprite2D" parent="Clouds/cloud1"]
+position = Vector2(-118, 32)
+scale = Vector2(0.104125, 0.104125)
+texture = ExtResource("2_pkny4")
+
+[node name="cloud4" type="Node2D" parent="Clouds"]
+position = Vector2(712, 449)
+scale = Vector2(0.771119, 0.771119)
+
+[node name="c" type="Sprite2D" parent="Clouds/cloud4"]
+position = Vector2(-18.1554, -2.59365)
+scale = Vector2(0.181, 0.181)
+texture = ExtResource("2_pkny4")
+
+[node name="c2" type="Sprite2D" parent="Clouds/cloud4"]
+position = Vector2(-76.5121, 15.5618)
+scale = Vector2(0.2445, 0.2445)
+texture = ExtResource("2_pkny4")
+
+[node name="c3" type="Sprite2D" parent="Clouds/cloud4"]
+position = Vector2(-63.5439, 11.6713)
+scale = Vector2(0.16425, 0.16425)
+texture = ExtResource("2_pkny4")
+
+[node name="c4" type="Sprite2D" parent="Clouds/cloud4"]
+position = Vector2(-97.2612, 33.7172)
+scale = Vector2(0.16425, 0.16425)
+texture = ExtResource("2_pkny4")
+
+[node name="c5" type="Sprite2D" parent="Clouds/cloud4"]
+position = Vector2(-5.1873, 33.7172)
+scale = Vector2(0.16425, 0.16425)
+texture = ExtResource("2_pkny4")
+
+[node name="c6" type="Sprite2D" parent="Clouds/cloud4"]
+position = Vector2(42.795, 19.4523)
+scale = Vector2(0.104125, 0.104125)
+texture = ExtResource("2_pkny4")
+
+[node name="c7" type="Sprite2D" parent="Clouds/cloud4"]
+position = Vector2(-142.65, 28.53)
+scale = Vector2(0.104125, 0.104125)
+texture = ExtResource("2_pkny4")
+
+[node name="cloud2" type="Node2D" parent="Clouds"]
+position = Vector2(702, 253)
+
+[node name="c" type="Sprite2D" parent="Clouds/cloud2"]
+position = Vector2(-29, 33)
+scale = Vector2(0.181, 0.181)
+texture = ExtResource("2_pkny4")
+
+[node name="c2" type="Sprite2D" parent="Clouds/cloud2"]
+position = Vector2(-12, -20)
+scale = Vector2(0.2445, 0.2445)
+texture = ExtResource("2_pkny4")
+
+[node name="c3" type="Sprite2D" parent="Clouds/cloud2"]
+position = Vector2(-98, 22)
+scale = Vector2(0.16425, 0.16425)
+texture = ExtResource("2_pkny4")
+
+[node name="c4" type="Sprite2D" parent="Clouds/cloud2"]
+position = Vector2(10, 57)
+scale = Vector2(0.16425, 0.16425)
+texture = ExtResource("2_pkny4")
+
+[node name="c5" type="Sprite2D" parent="Clouds/cloud2"]
+position = Vector2(55, -3)
+scale = Vector2(0.16425, 0.16425)
+texture = ExtResource("2_pkny4")
+
+[node name="c6" type="Sprite2D" parent="Clouds/cloud2"]
+position = Vector2(102, 18)
+scale = Vector2(0.104125, 0.104125)
+texture = ExtResource("2_pkny4")
+
+[node name="c9" type="Sprite2D" parent="Clouds/cloud2"]
+position = Vector2(126.484, 17.4844)
+scale = Vector2(0.0780625, 0.0780625)
+texture = ExtResource("2_pkny4")
+
+[node name="c10" type="Sprite2D" parent="Clouds/cloud2"]
+position = Vector2(-144, 33)
+scale = Vector2(0.0780625, 0.0780625)
+texture = ExtResource("2_pkny4")
+
+[node name="c8" type="Sprite2D" parent="Clouds/cloud2"]
+position = Vector2(66, 40)
+scale = Vector2(0.104125, 0.104125)
+texture = ExtResource("2_pkny4")
+
+[node name="c7" type="Sprite2D" parent="Clouds/cloud2"]
+position = Vector2(-72, 4)
+scale = Vector2(0.104125, 0.104125)
+texture = ExtResource("2_pkny4")
+
+[node name="cloud3" type="Node2D" parent="Clouds"]
+position = Vector2(219, 404)
+
+[node name="c" type="Sprite2D" parent="Clouds/cloud3"]
+position = Vector2(-29, 33)
+scale = Vector2(0.181, 0.181)
+texture = ExtResource("2_pkny4")
+
+[node name="c2" type="Sprite2D" parent="Clouds/cloud3"]
+position = Vector2(-41, 8)
+scale = Vector2(0.2445, 0.2445)
+texture = ExtResource("2_pkny4")
+
+[node name="c3" type="Sprite2D" parent="Clouds/cloud3"]
+position = Vector2(24, 45)
+scale = Vector2(0.16425, 0.16425)
+texture = ExtResource("2_pkny4")
+
+[node name="c4" type="Sprite2D" parent="Clouds/cloud3"]
+position = Vector2(-11, -7)
+scale = Vector2(0.16425, 0.16425)
+texture = ExtResource("2_pkny4")
+
+[node name="c5" type="Sprite2D" parent="Clouds/cloud3"]
+position = Vector2(46, 16)
+scale = Vector2(0.16425, 0.16425)
+texture = ExtResource("2_pkny4")
+
+[node name="c6" type="Sprite2D" parent="Clouds/cloud3"]
+position = Vector2(-87, 13)
+scale = Vector2(0.104125, 0.104125)
+texture = ExtResource("2_pkny4")
+
+[node name="c9" type="Sprite2D" parent="Clouds/cloud3"]
+position = Vector2(89, 30)
+scale = Vector2(0.0780625, 0.0780625)
+texture = ExtResource("2_pkny4")
+
+[node name="c10" type="Sprite2D" parent="Clouds/cloud3"]
+position = Vector2(-144, 33)
+scale = Vector2(0.0780625, 0.0780625)
+texture = ExtResource("2_pkny4")
+
+[node name="c8" type="Sprite2D" parent="Clouds/cloud3"]
+position = Vector2(-83, 51)
+scale = Vector2(0.104125, 0.104125)
+texture = ExtResource("2_pkny4")
+
+[node name="c7" type="Sprite2D" parent="Clouds/cloud3"]
+position = Vector2(-111, 25)
+scale = Vector2(0.104125, 0.104125)
+texture = ExtResource("2_pkny4")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 647.0

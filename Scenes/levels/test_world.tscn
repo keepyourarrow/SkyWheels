@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjmrssx3c1hu1"]
+[gd_scene load_steps=6 format=3 uid="uid://cjmrssx3c1hu1"]
 
 [ext_resource type="PackedScene" uid="uid://tkrt1s1ogggb" path="res://Scenes/levels/base_level.tscn" id="1_ism1g"]
 [ext_resource type="PackedScene" uid="uid://da3et7e2nlxk" path="res://Scenes/block.tscn" id="1_ykh6j"]
 [ext_resource type="PackedScene" uid="uid://dmc5kp0u1tfgy" path="res://Scenes/circle.tscn" id="2_1lgcq"]
 [ext_resource type="FontFile" uid="uid://b7niu3em14t4a" path="res://Assets/Fonts/Minecraft.ttf" id="3_ek6an"]
+[ext_resource type="PackedScene" uid="uid://b3jwxesjo0ato" path="res://Scenes/finish_line.tscn" id="5_qy82u"]
 
 [node name="TestWorld" instance=ExtResource("1_ism1g")]
 
@@ -150,3 +151,6 @@ offset_bottom = 224.0
 theme_override_fonts/font = ExtResource("3_ek6an")
 theme_override_font_sizes/font_size = 30
 text = "Press > or < to drive"
+
+[node name="FinishLine" parent="." index="2" instance=ExtResource("5_qy82u")]
+position = Vector2(3825, 483)
