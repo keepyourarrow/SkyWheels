@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://6fvcxotwymee"]
+
+[ext_resource type="Texture2D" uid="uid://i7g231guprqv" path="res://Assets/Objects/cliffsign.png" id="1_aadew"]
+
+[node name="cliffWarningSign" type="Sprite2D"]
+texture = ExtResource("1_aadew")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://3gq2n64qy7vm"]
+
+[ext_resource type="Texture2D" uid="uid://3by020hb7kf1" path="res://Assets/Objects/downhillsign.png" id="1_fn3cl"]
+
+[node name="downHillSign" type="Sprite2D"]
+texture = ExtResource("1_fn3cl")

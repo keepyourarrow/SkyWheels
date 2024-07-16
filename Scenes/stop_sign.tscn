@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://7tbred2t7ic4"]
+
+[ext_resource type="Texture2D" uid="uid://cxbfuksgbcitm" path="res://Assets/Objects/stop-sign.png" id="1_j6tpd"]
+
+[node name="StopSign" type="Sprite2D"]
+texture = ExtResource("1_j6tpd")

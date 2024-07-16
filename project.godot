@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="Sky Wheels"
+<<<<<<< Updated upstream
 run/main_scene="res://Scenes/test_world.tscn"
+=======
+run/main_scene="res://Scenes/levels/level_1.tscn"
+>>>>>>> Stashed changes
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 

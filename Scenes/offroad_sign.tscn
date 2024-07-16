@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4lgmcn081nlm"]
+
+[ext_resource type="Texture2D" uid="uid://bwtsovspf60tu" path="res://Assets/Objects/roughTerrainSign.png" id="1_g74qs"]
+
+[node name="offroadSign" type="Sprite2D"]
+texture = ExtResource("1_g74qs")

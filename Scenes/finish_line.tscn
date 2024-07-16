@@ -7,7 +7,7 @@
 size = Vector2(128, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4ty3"]
-size = Vector2(128, 10)
+size = Vector2(8, 10)
 
 [node name="FinishLine" type="StaticBody2D"]
 script = ExtResource("1_qbfs8")
