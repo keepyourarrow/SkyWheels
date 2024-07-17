@@ -1,0 +1,230 @@
+[gd_scene load_steps=16 format=3 uid="uid://dr518eiq7qywt"]
+
+[ext_resource type="PackedScene" uid="uid://da3et7e2nlxk" path="res://Scenes/block.tscn" id="1_3wqv7"]
+[ext_resource type="PackedScene" uid="uid://b4lgmcn081nlm" path="res://Scenes/offroad_sign.tscn" id="1_ujdqk"]
+[ext_resource type="PackedScene" uid="uid://dqrd2b4g0hf5s" path="res://Scenes/movingblock.tscn" id="2_n6cn6"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="3_su3mb"]
+[ext_resource type="PackedScene" uid="uid://vi3bx4cejx5y" path="res://Scenes/cars/sedan.tscn" id="4_brq4d"]
+[ext_resource type="Script" path="res://Scripts/FallingBall.gd" id="4_qwyqm"]
+[ext_resource type="PackedScene" uid="uid://dmc5kp0u1tfgy" path="res://Scenes/circle.tscn" id="5_2781y"]
+[ext_resource type="Texture2D" uid="uid://j0nmsrwuqfen" path="res://Assets/Objects/whiteCirc.png" id="5_g06rg"]
+[ext_resource type="PackedScene" uid="uid://b3jwxesjo0ato" path="res://Scenes/finish_line.tscn" id="8_i54vj"]
+[ext_resource type="PackedScene" uid="uid://7tbred2t7ic4" path="res://Scenes/stop_sign.tscn" id="10_03ih4"]
+[ext_resource type="Texture2D" uid="uid://cpelp60fo4s7t" path="res://Assets/Objects/noEntrysign.png" id="11_u755a"]
+[ext_resource type="PackedScene" uid="uid://6fvcxotwymee" path="res://Scenes/cliff_warning_sign.tscn" id="12_h1opt"]
+[ext_resource type="Texture2D" uid="uid://3by020hb7kf1" path="res://Assets/Objects/downhillsign.png" id="13_2ogxd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1hwfj"]
+radius = 39.1152
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_85saw"]
+radius = 39.3192
+
+[node name="level_3" type="Node2D"]
+
+[node name="Enviroment" type="Node" parent="."]
+
+[node name="Signs" type="Node" parent="Enviroment"]
+
+[node name="offroadSign" parent="Enviroment/Signs" instance=ExtResource("1_ujdqk")]
+position = Vector2(689, 233)
+
+[node name="blocks" type="Node" parent="Enviroment"]
+
+[node name="Block8" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(1617, 450)
+scale = Vector2(0.804573, 0.933062)
+
+[node name="Block12" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(2398, 643)
+scale = Vector2(0.882361, 13.2109)
+
+[node name="Block13" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(2662, 724)
+scale = Vector2(0.786046, 8.1113)
+
+[node name="Block14" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(2911, 778)
+scale = Vector2(0.787638, 4.74487)
+
+[node name="Block17" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(3385, 1819)
+scale = Vector2(0.787638, 4.74487)
+
+[node name="Block3" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(1346, 364)
+rotation = 0.523598
+scale = Vector2(1.09598, 1.07039)
+
+[node name="Block4" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(3747, 1225)
+rotation = -0.634084
+scale = Vector2(5.21599, 0.850151)
+
+[node name="Block5" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(616, 280)
+scale = Vector2(3.6825, 1.12513)
+
+[node name="Block6" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(3176, 838)
+scale = Vector2(0.898407, 0.886328)
+
+[node name="Block9" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(3610, 838)
+scale = Vector2(0.6327, 0.886328)
+
+[node name="Block11" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(3989, 838)
+scale = Vector2(0.6327, 0.886328)
+
+[node name="Block18" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(2081, 1246)
+scale = Vector2(0.6327, 0.886328)
+
+[node name="Block15" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(2978, 1880)
+scale = Vector2(0.967408, 0.864447)
+
+[node name="Block16" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(2360, 1418)
+scale = Vector2(0.6327, 0.886328)
+
+[node name="Block19" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(2662, 1596)
+scale = Vector2(0.6327, 0.886328)
+
+[node name="Block7" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(3356, 825)
+rotation = -0.301275
+scale = Vector2(0.281966, 0.886328)
+
+[node name="Block10" parent="Enviroment/blocks" instance=ExtResource("1_3wqv7")]
+position = Vector2(3748, 824)
+rotation = -0.332083
+scale = Vector2(0.281966, 0.886328)
+
+[node name="Circle" parent="Enviroment/blocks" instance=ExtResource("5_2781y")]
+position = Vector2(955, 280)
+scale = Vector2(2.35404, 2.35404)
+
+[node name="Circle2" parent="Enviroment/blocks" instance=ExtResource("5_2781y")]
+position = Vector2(885, 280)
+scale = Vector2(1.51337, 1.51337)
+
+[node name="Circle3" parent="Enviroment/blocks" instance=ExtResource("5_2781y")]
+position = Vector2(1014, 280)
+scale = Vector2(1.51337, 1.51337)
+
+[node name="Circle4" parent="Enviroment/blocks" instance=ExtResource("5_2781y")]
+position = Vector2(847, 280)
+scale = Vector2(1.01172, 1.01172)
+
+[node name="Circle5" parent="Enviroment/blocks" instance=ExtResource("5_2781y")]
+position = Vector2(1052, 280)
+scale = Vector2(1.01172, 1.01172)
+
+[node name="Circle6" parent="Enviroment/blocks" instance=ExtResource("5_2781y")]
+position = Vector2(911, 280)
+scale = Vector2(1.75455, 1.75455)
+
+[node name="Circle7" parent="Enviroment/blocks" instance=ExtResource("5_2781y")]
+position = Vector2(992, 280)
+scale = Vector2(1.75455, 1.75455)
+
+[node name="Dynamic" type="Node" parent="Enviroment"]
+
+[node name="Movingblock" parent="Enviroment/Dynamic" instance=ExtResource("2_n6cn6")]
+position = Vector2(1825, 450)
+scale = Vector2(4.90684, 0.948782)
+move_direction = Vector2(1, 0)
+second_position = Vector2(2170, 450)
+move_speed = 70
+
+[node name="FallingBall" type="RigidBody2D" parent="Enviroment/Dynamic"]
+position = Vector2(3456, 642)
+script = ExtResource("4_qwyqm")
+end_position = 3000
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enviroment/Dynamic/FallingBall"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("5_g06rg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Dynamic/FallingBall"]
+shape = SubResource("CircleShape2D_1hwfj")
+
+[node name="FallingBall2" type="RigidBody2D" parent="Enviroment/Dynamic"]
+position = Vector2(3842, 643)
+script = ExtResource("4_qwyqm")
+end_position = 3000
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enviroment/Dynamic/FallingBall2"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("5_g06rg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Dynamic/FallingBall2"]
+shape = SubResource("CircleShape2D_85saw")
+
+[node name="FallingBall3" type="RigidBody2D" parent="Enviroment/Dynamic"]
+position = Vector2(3456, -588)
+script = ExtResource("4_qwyqm")
+end_position = 3000
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enviroment/Dynamic/FallingBall3"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("5_g06rg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Dynamic/FallingBall3"]
+shape = SubResource("CircleShape2D_1hwfj")
+
+[node name="FallingBall4" type="RigidBody2D" parent="Enviroment/Dynamic"]
+position = Vector2(3842, -587)
+script = ExtResource("4_qwyqm")
+end_position = 3000
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enviroment/Dynamic/FallingBall4"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("5_g06rg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Dynamic/FallingBall4"]
+shape = SubResource("CircleShape2D_85saw")
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(3610, 763)
+script = ExtResource("3_su3mb")
+metadata/_edit_group_ = true
+
+[node name="CarContainer" type="Node2D" parent="Player"]
+
+[node name="TempCar" parent="Player/CarContainer" instance=ExtResource("4_brq4d")]
+position = Vector2(-328, -287)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+rotation_smoothing_enabled = true
+
+[node name="FinishLine" parent="." instance=ExtResource("8_i54vj")]
+position = Vector2(3196, 1874)
+
+[node name="StopSign" parent="." instance=ExtResource("10_03ih4")]
+position = Vector2(1698, 407)
+
+[node name="NoEntrysign" type="Sprite2D" parent="."]
+position = Vector2(2125, 1204)
+rotation = 0.132665
+texture = ExtResource("11_u755a")
+
+[node name="cliffWarningSign" parent="." instance=ExtResource("12_h1opt")]
+position = Vector2(4424, 702)
+rotation = 0.194642
+
+[node name="Downhillsign" type="Sprite2D" parent="."]
+position = Vector2(4066, 795)
+texture = ExtResource("13_2ogxd")
+
+[node name="cliffWarningSign2" parent="." instance=ExtResource("12_h1opt")]
+position = Vector2(2822, 1837)
+rotation = -0.0988247
+scale = Vector2(-1, 1)

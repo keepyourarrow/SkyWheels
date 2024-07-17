@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bggadxwqmhi0u"]
+[gd_scene load_steps=7 format=3 uid="uid://bggadxwqmhi0u"]
 
 [ext_resource type="PackedScene" uid="uid://da3et7e2nlxk" path="res://Scenes/block.tscn" id="1_h5182"]
 [ext_resource type="PackedScene" uid="uid://dmc5kp0u1tfgy" path="res://Scenes/circle.tscn" id="2_n8kqd"]
 [ext_resource type="PackedScene" uid="uid://dqrd2b4g0hf5s" path="res://Scenes/movingblock.tscn" id="3_3n47v"]
-[ext_resource type="PackedScene" uid="uid://dcj8ruieupjxk" path="res://Scenes/player.tscn" id="4_bks2l"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="5_a3lkg"]
 [ext_resource type="PackedScene" uid="uid://b3jwxesjo0ato" path="res://Scenes/finish_line.tscn" id="5_sqo70"]
+[ext_resource type="PackedScene" uid="uid://vi3bx4cejx5y" path="res://Scenes/cars/sedan.tscn" id="6_jodtq"]
 
 [node name="Level-2" type="Node2D"]
 
@@ -111,8 +112,18 @@ position = Vector2(1879, 577)
 scale = Vector2(6.46406, 1.18994)
 second_position = Vector2(1879, 406)
 
-[node name="Player" parent="." instance=ExtResource("4_bks2l")]
-position = Vector2(160, 127)
-
 [node name="FinishLine" parent="." instance=ExtResource("5_sqo70")]
 position = Vector2(2927, 309)
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(199, 127)
+script = ExtResource("5_a3lkg")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+rotation_smoothing_enabled = true
+
+[node name="CarContainer" type="Node2D" parent="Player"]
+
+[node name="TempCar" parent="Player/CarContainer" instance=ExtResource("6_jodtq")]
+position = Vector2(-256, -177)

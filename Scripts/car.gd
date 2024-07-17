@@ -14,7 +14,7 @@ extends RigidBody2D
 @onready var backing_light: Sprite2D = $BackingLight
 
 const ROTATION_MODIFIER = 5;
-const BODY_TORQUE = 8000
+const BODY_TORQUE = 10000
 
 func _physics_process(_delta):
 	handle_movement()
